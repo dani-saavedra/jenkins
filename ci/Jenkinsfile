@@ -34,7 +34,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 // Construir la imagen Docker
-                sh "docker build -t ${DOCKER_REPO}:${tag_image} ."
+                sh "docker build -t ${DOCKER_REPO}:${params.tag_image} ."
             }
         }
 
