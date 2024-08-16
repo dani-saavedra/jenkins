@@ -42,7 +42,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials-id') {
-                        sh "docker push ${DOCKER_REPO}:${tag_image}"
+                        sh "docker push ${DOCKER_REPO}:${params.tag_image}"
                     }
                 }
             }
